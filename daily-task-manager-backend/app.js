@@ -18,7 +18,7 @@ app.get('/', (req, res) => {
     message: '🚀 MERN Task Manager Backend is running!',
     available_endpoints: {
       tasks: '/api/tasks',
-      gpt: '/api/gpt'
+      open_ai_summary: '/api/summary'
     },
     database: 'Connected ✅' // This will show if MongoDB is connected when route is called
   });
