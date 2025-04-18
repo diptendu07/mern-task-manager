@@ -15,3 +15,7 @@ coverage
 
 # System
 .DS_Store
+
+# Others
+**/screen-records
+
