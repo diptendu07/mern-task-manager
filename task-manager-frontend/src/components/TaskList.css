@@ -1,0 +1,93 @@
+/* Center the entire task list container */
+.task-list-container {
+    padding: 1rem;
+    color: #f0f0f0;
+    background-color: #1e1e2f;
+    border-radius: 10px;
+    max-width: 600px; /* Set a maximum width for a more centered look */
+    margin: 0 auto; /* Center the container horizontally */
+    text-align: center; /* Center text inside */
+  }
+  
+  /* Header remains the same, centered */
+  .task-list-header {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #fca311;
+    text-align: center;
+  }
+  
+  /* Center the button and make it more visually appealing */
+  .toggle-button {
+    padding: 0.6rem 1.2rem;
+    margin-bottom: 1rem;
+    background-color: #fca311;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    display: inline-block; /* To prevent full-width */
+    text-align: center;
+  }
+  
+  .toggle-button:hover {
+    background-color: #e89400;
+  }
+  
+  /* Center the task items */
+  .task-items {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center; /* Align task items in the center */
+  }
+  
+  /* Make task item content look more centered */
+  .task-item {
+    background-color: #2a2d3e;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    width: 100%; /* Ensures the task item takes up full width within the container */
+    max-width: 500px; /* Set a maximum width to avoid stretching the task item */
+    text-align: center; /* Align the content in the center */
+  }
+  
+  .task-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.4rem;
+  }
+  
+  .task-date {
+    font-size: 0.95rem;
+    color: #ccc;
+  }
+  
+  .task-info {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  
+  .reminder {
+    color: #90ee90;
+    margin-right: 1rem;
+  }
+  
+  .overdue-warning {
+    color: #ff6b6b;
+    font-weight: bold;
+  }
+  
+  .overdue {
+    border-left: 5px solid #ff4d4d;
+    text-align: center; /* Ensure the overdue warning is centered */
+  }
+  
+  .upcoming {
+    border-left: 5px solid #00b894;
+    text-align: center; /* Ensure the upcoming tasks are centered */
+  }
+  

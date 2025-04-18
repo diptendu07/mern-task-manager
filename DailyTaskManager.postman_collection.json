@@ -1,0 +1,108 @@
+{
+    "info": {
+      "_postman_id": "e92fa26f-7234-4c11-9eae-daily-task-manager",
+      "name": "Daily Task Manager API",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+      {
+        "name": "Create Task",
+        "request": {
+          "method": "POST",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"title\": \"Morning Standup\",\n  \"description\": \"Daily team meeting\",\n  \"dueDate\": \"2025-04-16T09:00:00Z\",\n  \"reminderTime\": \"2025-04-16T08:55:00Z\"\n}"
+          },
+          "url": {
+            "raw": "http://localhost:5000/api/tasks",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "5000",
+            "path": ["api", "tasks"]
+          }
+        }
+      },
+      {
+        "name": "Get All Tasks",
+        "request": {
+          "method": "GET",
+          "url": {
+            "raw": "http://localhost:5000/api/tasks",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "5000",
+            "path": ["api", "tasks"]
+          }
+        }
+      },
+      {
+        "name": "Get Task By ID",
+        "request": {
+          "method": "GET",
+          "url": {
+            "raw": "http://localhost:5000/api/tasks/:id",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "5000",
+            "path": ["api", "tasks", ":id"]
+          }
+        }
+      },
+      {
+        "name": "Update Task",
+        "request": {
+          "method": "PUT",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"title\": \"Updated Task\",\n  \"description\": \"Updated description\",\n  \"dueDate\": \"2025-04-17T12:00:00Z\",\n  \"reminderTime\": \"2025-04-17T11:45:00Z\"\n}"
+          },
+          "url": {
+            "raw": "http://localhost:5000/api/tasks/:id",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "5000",
+            "path": ["api", "tasks", ":id"]
+          }
+        }
+      },
+      {
+        "name": "Delete Task",
+        "request": {
+          "method": "DELETE",
+          "url": {
+            "raw": "http://localhost:5000/api/tasks/:id",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "5000",
+            "path": ["api", "tasks", ":id"]
+          }
+        }
+      },
+      {
+        "name": "Get GPT Daily Summary",
+        "request": {
+          "method": "GET",
+          "url": {
+            "raw": "http://localhost:5000/api/summary",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "5000",
+            "path": ["api", "summary"]
+          }
+        }
+      }
+    ]
+  }
+  
