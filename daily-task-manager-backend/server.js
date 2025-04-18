@@ -15,6 +15,7 @@ mongoose.connect(MONGO_URI, {
   
   app.listen(PORT, () => {
     console.log(`🚀 Server running on http://localhost:${PORT}`);
+    console.log(`🌐 Test backend at: http://localhost:${PORT}/`); // Added line
 
     // Start the reminder scheduler once the server is up
     startReminderScheduler();
