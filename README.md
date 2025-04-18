@@ -56,59 +56,65 @@ The application uses **MongoDB Atlas** for cloud-based data storage:
 ## Project Structure 📂  
 
 mern-task-manager/
-├── daily-task-manager-backend/ # Node/Express backend
-└── task-manager-frontend/ # React frontend
+├───backend/ # Node.js/Express backend
+├───frontend/ # React/Vite frontend
+├───screenshots/ # Application screenshots
 
-# Backend (Node/Express)
-daily-task-manager-backend/
-├── controllers/
-│   ├── taskController.js    # Mock task CRUD operations
-│   └── gptController.js     # Mock GPT responses
-├── models/
-│   └── Task.js              # Task schema (for consistency)
-├── routes/
-│   ├── taskRoutes.js        # Task endpoints
-│   └── gptRoutes.js         # GPT endpoints
-├── utils/
-│   ├── reminderScheduler.js # Mock scheduler
-├── app.js                   # Express app configuration
-├── server.js                # Server entry point
-├── package.json
-└── README.md                # Docs explaining mock setup
+### Backend (Node.js/Express)
+backend/
+├───src/
+│ ├───config/ # Configuration files
+│ ├───controllers/ # Business logic
+│ │ ├── taskController.js
+│ │ └── gptController.js
+│ ├───models/ # Database schemas
+│ │ └── Task.js
+│ ├───routes/ # API endpoints
+│ │ ├── taskRoutes.js
+│ │ └── gptRoutes.js
+│ └───utils/ # Helper functions
+│ └── reminderScheduler.js
+├───.env.example # Environment template
+├───app.js # Express application
+├───server.js # Server entry point
+└───package.json
 
-# Fronetend (React)
-
-task-manager-frontend/
-├── node_modules/          # Installed dependencies
-├── public/                # Static assets
-│   ├── vite.svg           # Default Vite logo
-│   └── (other static files like favicon.ico)
-├── src/
-│   ├── assets/            # Assets like images (created by Vite)
-│   │   └── react.svg      # Default React logo
-│   ├── components/
-│   │   ├── TaskList.tsx
-│   │   ├── TaskList.css   # Component-specific styles
-│   │   ├── TaskForm.tsx
-│   │   ├── Summary.tsx
-│   │   └── Summary.css    # Component-specific styles
-│   ├── pages/
-│   │   ├── Home.tsx
-│   │   └── SummaryPage.tsx
-│   ├── services/
-│   │   └── api.ts         # Axios API configuration
-│   ├── types/
-│   │   └── Task.ts        # TypeScript type definitions
-│   ├── App.tsx            # Main App component
-│   ├── App.css            # Global styles
-│   ├── main.tsx           # App entry point
-│   └── index.css          # Base styles
-├── .gitignore             # Git ignore file
-├── index.html             # Main HTML file
-├── package-lock.json      # Dependency lockfile
-├── package.json           # Project configuration
-├── tsconfig.json          # TypeScript config
-└── vite.config.ts         # Vite configuration
+### Frontend (React/Vite)
+frontend/
+├───public/ # Static assets
+│ ├── favicon.ico
+│ └── vite.svg
+├───src/
+│ ├───assets/ # Images, fonts
+│ ├───components/ # Reusable UI components
+│ │ ├── TaskList/
+│ │ │ ├── TaskList.tsx
+│ │ │ └── TaskList.css
+│ │ ├── TaskForm/
+│ │ │ ├── TaskForm.tsx
+│ │ │ └── TaskForm.css
+│ │ └── Summary/
+│ │ ├── Summary.tsx
+│ │ └── Summary.css
+│ ├───pages/ # Application views
+│ │ ├── Home/
+│ │ │ ├── Home.tsx
+│ │ │ └── Home.css
+│ │ └── SummaryPage/
+│ │ ├── SummaryPage.tsx
+│ │ └── SummaryPage.css
+│ ├───services/ # API clients
+│ │ └── api.ts
+│ ├───types/ # TypeScript definitions
+│ │ └── Task.ts
+│ ├───App.tsx # Root component
+│ ├───main.tsx # Entry point
+│ └───index.css # Global styles
+├───.eslintrc.json # Linting config
+├───index.html # Main HTML
+├───package.json
+├───tsconfig.json
+└───vite.config.ts
 
 ---
 
